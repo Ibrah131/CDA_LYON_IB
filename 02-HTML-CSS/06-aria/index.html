@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire de réservation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Menu -->
+  <header class="site-header">
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <ul role="menubar">
+        <li role="menuitem">
+          <a href="#">Accueil</a>
+        </li>
+        <li role="menuitem">
+          <a href="#" aria-current="page">Réservation</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main role="main">
+    <h1 id="formTitle">Réservation de voyage</h1>
+
+    <form action="#" method="post" role="form" aria-labelledby="formTitle" novalidate>
+
+      <!-- Infos personnelles -->
+      <fieldset aria-labelledby="infosPerso">
+        <legend id="infosPerso">Informations personnelles</legend>
+
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" required aria-required="true" aria-labelledby="prenom" aria-invalid="false" />
+
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" required aria-required="true" aria-labelledby="nom" aria-invalid="false" />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required aria-required="true" aria-labelledby="email" aria-describedby="emailHelp" aria-invalid="false" />
+        <small id="emailHelp">Votre adresse email sera utilisée pour la confirmation.</small>
+
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" aria-describedby="telHelp" aria-labelledby="tel" />
+        <small id="telHelp">Format attendu : 0601020304</small>
+      </fieldset>
+
+      <!-- Adresse facturation -->
+      <fieldset aria-labelledby="facturation">
+        <legend id="facturation">Adresse de facturation</legend>
+
+        <label for="fact_rue">Rue</label>
+        <input type="text" id="fact_rue" name="fact_rue" aria-labelledby="fact_rue" />
+
+        <label for="fact_ville">Ville</label>
+        <input type="text" id="fact_ville" name="fact_ville" aria-labelledby="fact_ville" />
+
+        <label for="fact_cp">Code postal</label>
+        <input type="text" id="fact_cp" name="fact_cp" aria-labelledby="fact_cp" />
+
+        <label for="fact_pays">Pays</label>
+        <input type="text" id="fact_pays" name="fact_pays" aria-labelledby="fact_pays" />
+      </fieldset>
+
+      <!-- Adresse destination -->
+      <fieldset aria-labelledby="destination">
+        <legend id="destination">Adresse de destination</legend>
+
+        <label for="dest_rue">Rue</label>
+        <input type="text" id="dest_rue" name="dest_rue" aria-labelledby="dest_rue" />
+
+        <label for="dest_ville">Ville</label>
+        <input type="text" id="dest_ville" name="dest_ville" aria-labelledby="dest_ville" />
+
+        <label for="dest_cp">Code postal</label>
+        <input type="text" id="dest_cp" name="dest_cp" aria-labelledby="dest_cp" />
+
+        <label for="dest_pays">Pays</label>
+        <input type="text" id="dest_pays" name="dest_pays" aria-labelledby="dest_pays" />
+      </fieldset>
+
+      <!-- Compte utilisateur -->
+      <fieldset aria-labelledby="compte">
+        <legend id="compte">Création du compte</legend>
+
+        <label for="password">Mot de passe *</label>
+        <input type="password" id="password" name="password" required aria-required="true" aria-labelledby="password" aria-describedby="passHelp" aria-invalid="false" />
+        <small id="passHelp">Minimum 6 caractères requis.</small>
+
+        <label for="confirm_password">Confirmer le mot de passe *</label>
+        <input type="password" id="confirm_password" name="confirm_password" required aria-required="true" aria-labelledby="confirm_password" aria-invalid="false" />
+      </fieldset>
+
+      <!-- Infos voyage -->
+      <fieldset aria-labelledby="voyage">
+        <legend id="voyage">Détails du voyage</legend>
+
+        <label for="type_voyage">Type de voyage</label>
+        <select id="type_voyage" name="type_voyage" aria-labelledby="type_voyage">
+          <option value="">--Choisir--</option>
+          <option value="aller">Aller simple</option>
+          <option value="retour">Aller-retour</option>
+          <option value="multi">Multi-destinations</option>
+        </select>
+
+        <label for="depart">Date de départ</label>
+        <input type="date" id="depart" name="depart" aria-labelledby="depart" />
+
+        <label for="retour">Date de retour</label>
+        <input type="date" id="retour" name="retour" aria-labelledby="retour" />
+
+        <p id="classeLabel">Classe :</p>
+        <ul aria-labelledby="classeLabel">
+          <li><label><input type="radio" name="classe" value="eco" required aria-required="true" /> Économique</label></li>
+          <li><label><input type="radio" name="classe" value="business" /> Affaires</label></li>
+          <li><label><input type="radio" name="classe" value="first" /> Première classe</label></li>
+        </ul>
+
+        <p id="optionsLabel">Options :</p>
+        <ul aria-labelledby="optionsLabel">
+          <li><label><input type="checkbox" name="options" value="repas" /> Repas spéciaux</label></li>
+          <li><label><input type="checkbox" name="options" value="siege" /> Siège confort</label></li>
+        </ul>
+
+
+
+        
+      </fieldset>
+
+      <!-- Commentaires -->
+      <fieldset aria-labelledby="commentaires">
+        <legend id="commentaires">Autres demandes</legend>
+        <label for="demande">Commentaires</label>
+        <textarea id="demande" name="demande" rows="4" aria-labelledby="demande"></textarea>
+      </fieldset>
+
+      <!-- Envoi -->
+      <div class="btncontainer">
+        <button type="submit" aria-label="Envoyer la réservation">Envoyer la réservation</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

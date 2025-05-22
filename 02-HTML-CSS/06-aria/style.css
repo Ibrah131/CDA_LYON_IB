@@ -1,0 +1,207 @@
+:root {
+    font-size: 62.5%;
+    --bg: #eef1f7;
+    --glass: rgba(255, 255, 255, 0.6);
+    --text: #222;
+    --accent: #7e57c2;
+    --radius: 1rem;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    padding: 2rem;
+    color: var(--text);
+  }
+  
+
+/****************************/
+.site-header {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.6rem;
+  }
+  
+  .menu a:hover {
+    color: var(--accent);
+  }
+
+
+
+
+
+/****************************/
+
+
+
+
+  main {
+    max-width: 800px;
+    margin: auto;
+    background: var(--glass);
+    padding: 3rem;
+    border-radius: var(--radius);
+    backdrop-filter: blur(20px);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #57398a;
+
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+
+
+/****************************/
+
+
+
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  fieldset {
+    border: 1px solid #a285a5;
+    border-radius: var(--radius);
+    padding: 2rem;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: var(--accent);
+
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  
+  input, select, textarea {
+    width: 95%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: var(--radius);
+    font-size: 1.4rem;
+    font-family: inherit;
+  }
+
+  select{
+    width: 98%;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+
+
+/****************************/
+    small {
+        font-size: 1.2rem;
+        color: #555;
+    }
+    
+
+    p{
+        font-size: 1.6rem;
+
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+      
+    ul li {
+        margin-bottom: 1rem;
+    }
+      
+    ul li label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        white-space: nowrap; 
+    }
+      
+/****************************/
+
+  
+  button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    text-align: center; 
+
+    font-size: 1.6rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5e35b1;
+  }
+
+  .btncontainer{
+    align-self: center;
+  }
+
+  label:has(input[type="radio"]:focus),
+  label:has(input[type="checkbox"]:focus) {
+    background-color: #f3eaff;
+    outline: 2px solid #7e57c2;
+    outline-offset: 3px;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    transition: background 0.2s ease;
+  }
+  
+  
+
+/****************************/
+
+
+
+
+  @media (max-width: 600px) {
+    main {
+      padding: 2rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

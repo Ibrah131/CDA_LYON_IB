@@ -1,0 +1,69 @@
+* {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+#container {
+  display: grid;
+  height:100vh;
+  grid-template-areas:
+    "haut"
+    "menu"
+    "zones"
+    "bas";
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px;
+}
+
+#container > div:nth-child(1) {
+  grid-area: haut;
+  background: purple;
+}
+
+#container > div:nth-child(2) {
+  grid-area: menu;
+  background: blue;
+}
+
+#container > div:nth-child(3) {
+  grid-area: zones;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  background: pink;
+}
+
+#container > div:nth-child(4) {
+  grid-area: bas;
+  background: gray;
+}
+
+/* Boutons */
+button {
+  border: none;
+}
+
+/* PZ */
+#container > div:nth-child(3) > button:nth-child(n+1):nth-child(-n+2),
+#container > div:nth-child(3) > button:nth-child(n+5):nth-child(-n+6) {
+  background: red;
+}
+
+#container > div:nth-child(3) > button:nth-child(n+3):nth-child(-n+4),
+#container > div:nth-child(3) > button:nth-child(n+7):nth-child(-n+8) {
+  background: yellow;
+}
+
+
+#container > div:nth-child(3) > button:nth-child(n+9):nth-child(-n+10),
+#container > div:nth-child(3) > button:nth-child(n+13):nth-child(-n+14){
+  background: green;
+}
+
+
+#container > div:nth-child(3) > button:nth-child(n+11):nth-child(-n+12),
+#container > div:nth-child(3) > button:nth-child(n+15):nth-child(-n+16) {
+  background: brown;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <h2>Réservation de Rendez-vous</h2>
+  <form id="reservationForm">
+    <label>Nom du client :</label><br>
+    <input type="text" id="name"><br>
+    <div id="nameError" class="error"></div>
+
+    <label>Date du rendez-vous :</label><br>
+    <input type="date" id="date" min=""><br>
+    <div id="dateError" class="error"></div>
+
+    <label>Heure du rendez-vous :</label><br><br>
+    <select id="time" >
+      <option value="">-- Choisir une heure --</option>
+      <option value="09:00">09:00</option>
+      <option value="13:30">13:30</option>
+    </select>
+    
+    <div id="timeError" class="error"></div><br>
+
+    <label>Nombre de participants :</label><br>
+    <input type="number" id="participants" min="0" max="10"><br>
+    <div id="participantsError" class="error"></div>
+
+    <button type="submit">Réserver</button>
+  </form>
+
+  <h3>Réservations :</h3>
+  <table id="reservationsTable">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Participants</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
+</body>
+</html>

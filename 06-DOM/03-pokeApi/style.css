@@ -1,0 +1,7 @@
+body{
+    font-family: 'arial', sans-serif;
+
+}
+ol li::marker {
+    font-weight: bold; /* numéros en gras */
+}

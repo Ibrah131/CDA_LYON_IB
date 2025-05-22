@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+/*************************** Calculatrice 1 (light) ***************************/
+  
+  .calculator {
+    background: #333;
+    margin:5px;
+    padding-top:40px;
+    width: 270px;
+  }
+
+  .display {
+    color: white;
+    font-size: 48px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+
+  .calculator button {
+    flex: 1;
+    padding: 23px 20px;
+
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    background: #c9c9c9;
+    color: rgb(87, 87, 87);
+    transition: 0.2s;
+  }
+
+  /* Ligne 1 */
+  .row:nth-child(2) button:nth-child(-n+3) {
+    background: #a5a5a5;
+    color: rgb(87, 87, 87);
+  }
+
+  /* btns à droite */
+  .row button:last-child {
+    background: orange;
+    color: white;
+  }
+
+  /* Dernière ligne */
+  .row:last-child button:first-child {
+    flex: 3.1;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+
+  /* Hover (effet au survol) */
+  .calculator button:hover {
+    opacity: 0.8;
+  }
+
+

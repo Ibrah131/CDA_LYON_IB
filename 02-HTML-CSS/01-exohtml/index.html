@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bienvenue au Café des Amis!">
+    <meta name="keywords" content="café, restaurant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café des Amis</title>
+    <link rel="icon" href="***">
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <img src="logo.png" alt="Logo du Café des Amis" width="150">
+        <h1>Café des Amis</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#menu">Le Menu</a></li>
+                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#horaires">Horaires</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section>
+            <h2>Présentation</h2>
+            <p>Bienvenue au Café des Amis les amis!</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <article>
+                <h3>Boissons</h3>
+                <ul>
+                    <li>Expresso</li>
+                    <li>Latte</li>
+                    <li>Thé vert</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Plats</h3>
+                <ul>
+                    <li>Salade</li>
+                    <li>Quiche</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Galerie de photos</h2>
+            <figure>
+                <img src="images/***.jpg" alt="img 1" width="300">
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="images/***.jpg" alt="img 2" width="300">
+                <figcaption>Un bon café pour bien commencer la journée</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Réserver une table</h2>
+            <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <label for="heure">Heure :</label>
+                <input type="time" id="heure" name="heure" required><br>
+
+                <input type="submit" value="Réserver">
+            </form>
+        </section>
+
+        <aside id="horaires">
+            <h2>Horaires d'ouverture</h2>
+            <table border="1">
+                <thead>
+                    <tr><th>Jour</th><th>Horaires</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Lundi</td><td>Fermé</td></tr>
+                    <tr><td>Mardi - Vendredi</td><td>08h00 - 18h00</td></tr>
+                    <tr><td>Samedi - Dimanche</td><td>09h00 - 20h00</td></tr>
+                </tbody>
+            </table>
+        </aside>
+    </main>
+
+    <!-- footer -->
+     <p>footer</p>
+     
+    <footer>
+        <p>Contactez-nous : contact@cafedesamis.com</p>
+        <p>Suivez-nous :
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr Patient - Prise de rendez-vous</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <section>
+        <h1 class="header-title"">Prise de rendez-vous</h1>
+        <nav style="text-align:center;">
+            <a href="index.html">Accueil</a>
+            <a href="horaires.html">Horaires</a>
+            <a href="contact.html">Contact</a>
+            <a href="rdv.html">Prise de RDV</a>
+        </nav>
+
+
+        <h2>Créneaux disponibles</h2>
+
+        <!-- Tableau des créneaux réservés -->
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>09h00</th>
+              <th>09h30</th>
+              <th>10h00</th>
+              <th>11h00</th>
+              <th>14h00</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>27/03/2025</td>
+              <td class="reserved">Réservé</td>
+              <td class="reserved">Réservé</td>
+              <td>Disponible</td>
+              <td class="reserved">Réservé</td>
+              <td>Disponible</td>
+            </tr>
+            <tr>
+              <td>28/03/2025</td>
+              <td class="reserved">Réservé</td>
+              <td>Disponible</td>
+              <td class="reserved">Réservé</td>
+              <td>Disponible</td>
+              <td>Disponible</td>
+            </tr>
+            <tr>
+              <td>29/03/2025</td>
+              <td>Disponible</td>
+              <td>Disponible</td>
+              <td>Disponible</td>
+              <td>Disponible</td>
+              <td class="reserved">Réservé</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <h2>Prenez rendez-vous!</h2>
+        <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel" required>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="heure">Heure :</label>
+            <select id="heure" name="heure" required>
+            <option value="">-- Choisir un créneau --</option>
+            <option value="09:00">09h00</option>
+            <option value="09:30">09h30</option>
+            <option value="10:00">10h00</option>
+            <option value="14:00">14h00</option>
+            <option value="15:00">15h00</option>
+            <option value="16:00">16h00</option>
+            </select>
+
+            <label for="motif">Motif de consultation :</label>
+            <textarea id="motif" name="motif" rows="4" placeholder="Ex: fièvre, contrôle,..."></textarea>
+            <button type="submit">Envoyer la demande</button>
+        </form>
+  </section>
+
+</body>
+</html>

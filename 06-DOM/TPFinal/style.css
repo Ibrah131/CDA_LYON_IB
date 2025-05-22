@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+  }
+  
+
+
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .grilles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  
+  .ligne {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+  }
+  
+  .case {
+    width: 3em;
+    height: 3em;
+    background: white;
+    border: 2px solid #ccc;
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Couleurs selon état */
+  .case.valide {
+    background-color: green;
+    color: white;
+  }
+  .case.present {
+    background-color: gold;
+    color: white;
+  }
+  .case.faux {
+    background-color: grey;
+    color: white;
+  }
+  
+  .clavier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .clavier button {
+    min-width: 36px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .clavier button:hover {
+    background: #ccc;
+  }
+  
+  .clavier .special {
+    color: rgb(8, 8, 8);
+    min-width: 70px;
+  }
+  
+  .clavier .special:hover {
+    background: #777;
+  }
+  
+
+
+  .reponse {
+    margin-bottom: 30px;
+    background-color: #000000; 
+    font-weight: bold;
+    user-select: none;
+    transition: color 0.3s;
+    cursor: help;
+  }
+  
+  .reponse:hover {
+    color: #ffffff; 
+    cursor: pointer;
+  }
+  
