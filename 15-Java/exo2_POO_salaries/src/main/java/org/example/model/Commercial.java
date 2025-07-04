@@ -14,8 +14,9 @@ public class Commercial extends Salarie {
     @Override
     public void afficherSalaire() {
         double salaireTotal = salaire + (chiffreAffaire * commissionPourcentage / 100);
-        System.out.println("Le salaire de " + nom + " (Commercial) est de " + salaireTotal + " €");
+        System.out.println("Le salaire de " + nom + " est de " + salaire + " € + " + (chiffreAffaire * commissionPourcentage / 100) + " € de commission.");
     }
+
 
     @Override
     public String toString() {
