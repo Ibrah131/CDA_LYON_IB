@@ -19,10 +19,11 @@ public class CarteDeCredit implements Paiement {
 
     @Override
     public String effectuerPaiement(double montant) {
-        if (compte.debiter(montant)) {
-            return "Paiement de " + montant + "€ effectué par Carte de Crédit.";
+        if (compte.getSolde() >= montant) {
+            compte.debiter(montant);
+            return "Paiement de " + montant + " € effectué avec succès par Carte de Crédit.";
         } else {
-            return "Échec : solde insuffisant sur la carte.";
+            return "Échec du paiement par carte : solde insuffisant (" + compte.getSolde() + " €).";
         }
     }
 }

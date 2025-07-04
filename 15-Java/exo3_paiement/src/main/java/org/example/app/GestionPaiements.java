@@ -1,38 +1,43 @@
 package org.example.app;
 
 import org.example.interfaces.Paiement;
-import org.example.model.*;
+import org.example.model.CarteDeCredit;
+import org.example.model.Compte;
+import org.example.model.PayPal;
 
 import java.util.Scanner;
 
 public class GestionPaiements {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Paiement paiement;
+
+        // Création des comptes
+        Compte compteCarte = new Compte(200.0);
+        Compte comptePaypal = new Compte(150.0);
+
+        // Création des moyens de paiement
+        Paiement carte = new CarteDeCredit("1234", "Ibrahim", "12/25", "123", compteCarte);
+        Paiement paypal = new PayPal("ibrahim@mail.com", "motdepasse", comptePaypal);
 
         System.out.println("=== Système de Paiement ===");
-        System.out.println("1. Carte de Crédit");
-        System.out.println("2. PayPal");
-        System.out.print("Choix : ");
-        int choix = scanner.nextInt();
-
         System.out.print("Montant à payer : ");
         double montant = scanner.nextDouble();
 
-        switch (choix) {
-            case 1:
-                Compte compteCarte = new Compte(100); // Exemple : 100€ dispo
-                paiement = new CarteDeCredit("1234", "Jean", "12/25", "123", compteCarte);
-                break;
-            case 2:
-                Compte comptePayPal = new Compte(50); // Exemple : 50€ dispo
-                paiement = new PayPal("jean@email.com", "motdepasse", comptePayPal);
-                break;
-            default:
-                System.out.println("Choix invalide.");
-                return;
+        System.out.println("1. Payer par Carte de Crédit");
+        System.out.println("2. Payer par PayPal");
+        System.out.print("Votre choix : ");
+        int choix = scanner.nextInt();
+
+        String resultat;
+        if (choix == 1) {
+            resultat = carte.effectuerPaiement(montant);
+        } else if (choix == 2) {
+            resultat = paypal.effectuerPaiement(montant);
+        } else {
+            resultat = "Option invalide.";
         }
 
-        System.out.println(paiement.effectuerPaiement(montant));
+        System.out.println(resultat);
+        scanner.close();
     }
 }

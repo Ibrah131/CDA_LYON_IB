@@ -15,10 +15,11 @@ public class PayPal implements Paiement {
 
     @Override
     public String effectuerPaiement(double montant) {
-        if (compte.debiter(montant)) {
-            return "Paiement de " + montant + "€ effectué via PayPal.";
+        if (compte.getSolde() >= montant) {
+            compte.debiter(montant);
+            return "Paiement de " + montant + " € effectué avec succès via PayPal.";
         } else {
-            return "Échec : solde insuffisant sur le compte PayPal.";
+            return "Échec du paiement PayPal : solde insuffisant (" + compte.getSolde() + " €).";
         }
     }
 }
