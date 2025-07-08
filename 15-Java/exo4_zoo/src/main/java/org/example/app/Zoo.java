@@ -20,10 +20,10 @@ public class Zoo {
                 case "3" -> ajouterAnimalDansEnclos();
                 case "4" -> afficherEnclos();
                 case "0" -> {
-                    System.out.println("À bientôt 🐾");
+                    System.out.println("À bientôt");
                     return;
                 }
-                default -> System.out.println("Choix invalide ❌");
+                default -> System.out.println("Choix invalide");
             }
         }
     }
