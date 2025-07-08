@@ -4,17 +4,33 @@ public class Billet {
     private int numeroPlace;
     private Client client;
     private Evenement evenement;
-    private TypePlace typePlace;
+    private TypePlace type;
 
-    public Billet(int numeroPlace, Client client, Evenement evenement, TypePlace typePlace) {
+    public Billet(int numeroPlace, Client client, Evenement evenement, TypePlace type) {
         this.numeroPlace = numeroPlace;
         this.client = client;
         this.evenement = evenement;
-        this.typePlace = typePlace;
+        this.type = type;
+    }
+
+    public int getNumeroPlace() {
+        return numeroPlace;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public Evenement getEvenement() {
+        return evenement;
+    }
+
+    public TypePlace getType() {
+        return type;
     }
 
     @Override
     public String toString() {
-        return "Billet #" + numeroPlace + " - " + typePlace + " - " + client + " - Événement: " + evenement;
+        return "Billet #" + numeroPlace + " - " + type + " - " + client + " - Événement: " + evenement;
     }
 }
