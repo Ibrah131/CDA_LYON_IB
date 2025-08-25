@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TP DOM - Profil</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="main.js" defer></script>
+</head>
+<body data-theme="light">
+  <main class="container">
+    <h1>Créer mon profil</h1>
+
+    <!-- Etape formulaire -->
+    <section id="setup" class="panel">
+      <!-- Description dynamique -->
+      <div class="block">
+        <div class="row">
+          <h2>Description</h2>
+          <button id="btn-desc" type="button" class="btn">Changer</button>
+        </div>
+        <p id="desc" class="desc">(Une description apparaîtra)</p>
+      </div>
+
+      <!-- Pseudo -->
+      <div class="block">
+        <h2>Pseudo</h2>
+        <input id="pseudo" type="text" placeholder="Ex. Marie" class="input" />
+        <small id="pseudo-help" class="help">Uniquement lettres (a-z / A-Z), min. 3 lettres.</small>
+        <div id="pseudo-error" class="error"></div>
+      </div>
+
+      <!-- Avatars -->
+      <div class="block">
+        <h2>Avatar</h2>
+        <div id="avatars" class="avatars">
+          <!-- On utilise des SVG inline simples pour éviter des fichiers images -->
+          <button class="avatar" data-id="1" type="button" title="Avatar 1">
+            <img src="images/avatar1.png" alt="Avatar 1" width="64" height="64">
+          </button>
+          <button class="avatar" data-id="2" type="button" title="Avatar 2">
+            <img src="images/avatar2.png" alt="Avatar 2" width="64" height="64">
+          </button>
+          <button class="avatar" data-id="3" type="button" title="Avatar 3">
+            <img src="images/avatar3.png" alt="Avatar 3" width="64" height="64">
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="btn-next" class="btn btn-primary" type="button" disabled>Suivant</button>
+      </div>
+    </section>
+
+    <!-- Carte finale (cachée au départ) -->
+    <section id="profile" class="panel hidden">
+      <img id="profile-avatar" alt="Avatar" width="96" height="96" class="profile-avatar" />
+      <h2 id="profile-name">titre ici</h2>
+      <p id="profile-desc"></p>
+      <button id="btn-reset" class="btn" type="button">Recommencer</button>
+    </section>
+  </main>
+
+  <!-- Toggle de thème, fixé en bas -->
+  <button id="theme-toggle" type="button" class="theme-toggle">🌞 Thème clair</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
